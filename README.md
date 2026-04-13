@@ -33,7 +33,7 @@ git clone
 ```
 From project root:
 ```bash
-ub sync
+uv sync
 ```
 
 ### Linux
