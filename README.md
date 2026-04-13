@@ -27,13 +27,18 @@ It supports both single-image and batch workflows, and the main CLI can process 
 - `.tiff`
 - `.webp`
 
-## Quick start (Linux)
-
-From project root:
-
+## Quick start 
 ```bash
-source .venv/bin/activate
-python main.py /home/desk24/Documents/projects/stl-generator/images \
+git clone
+```
+From project root:
+```bash
+ub sync
+```
+
+### Linux
+```bash
+uv run main.py /home/desk24/Documents/projects/stl-generator/images \
   --output-dir /home/desk24/Documents/projects/stl-generator/output/batch \
   --max-height 50 \
   --border 2 \
@@ -52,6 +57,30 @@ python main.py /home/desk24/Documents/projects/stl-generator/images \
   --hole-offset-y 1.0 \
   --corners-enabled \
   --corners-radius 1.5 \
+  --corners-segments 8
+```
+
+### Windows
+```bash
+uv run main.py C:\Users\folder `
+  --output-dir C:\Users\folder `
+  --max-height 50 `
+  --border 2 `
+  --thickness-min 0.5 `
+  --thickness-max 2.4 `
+  --border-thickness 2.4 `
+  --mm-per-pixel 0.1 `
+  --build-plate-surface left_edge `
+  --auto-white-balance `
+  --denoise-strength 0.2 `
+  --hole-enabled `
+  --hole-diameter 2 `
+  --hole-position top_right `
+  --hole-angle-deg 30 `
+  --hole-offset-x 1.0 `
+  --hole-offset-y 1.0 `
+  --corners-enabled `
+  --corners-radius 1.5 `
   --corners-segments 8
 ```
 
